@@ -34,7 +34,8 @@ pip install torch torchvision ultralytics open3d opencv-python tqdm numpy
 
 Note: You must download the corresponding weight file yoloworld_weights/best_forhuanong.pt and place it in the designated directory.
 
-📂 Input Requirements
+## 📂 Input Requirements
+
 The code requires an input folder (specified by datapath) with the following structure:
 
 ```bash
@@ -48,7 +49,7 @@ Trajectory File Format: Each line should be timestamp tx ty tz qx qy qz qw.
 
 Association File Format: Each line should be timestamp_filename filename.
 
-🚀 Usage
+## 🚀 Usage
 After configuring the environment and preparing your data, run id_divid.py directly:
 
 ```bash
