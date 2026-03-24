@@ -1,0 +1,2 @@
+diff-gaussian-rasterization:  https://github.com/graphdeco-inria/diff-gaussian-rasterization/tree/9c5c2028f6fbee2be239bc4c9421ff894fe4fbe0
+fused-ssim:  https://github.com/rahul-goel/fused-ssim/tree/1272e21a282342e89537159e4bad508b19b34157
