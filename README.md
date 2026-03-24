@@ -13,7 +13,7 @@ This project focuses on **plant-level understanding from continuous RGB-D sequen
 
 1. **Pose Estimation**  
    - Based on ORB-SLAM3 implementa
-   - 
+
 2. **Single-Plant View Extraction** ✅ *(Released)*  
    - Extracts all observations of each plant from video streams  
    - Based on spatial projection and global ID association  
