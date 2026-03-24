@@ -7,20 +7,24 @@
 This repository currently open-sources the **Single Plant View Extraction** module. By utilizing RGB-D image sequences and corresponding camera poses, this module automatically extracts all observational views of each individual plant from continuous video streams through spatial projection and global ID matching algorithms.
 
 ---
+## 📌 Overview
 
-## 🌟 Key Features
+This project focuses on **plant-level understanding from continuous RGB-D sequences**. The full pipeline consists of three key components:
 
-* **Automated Extraction**: Automatically segments large-scale scenes into individual plant datasets based on detection results and depth maps.
-* **Spatial Consistency Matching**: Ensures ID stability across different views using 3D center-point distance and temporal conflict detection, with automatic merging of fragmented IDs.
-* **Metadata Statistics**: Automatically generates runtime reports and GPU memory usage statistics upon completion for performance analysis.
-* **Complete Output**: Exports cropped Color, Depth, and Mask data, along with independent camera trajectory files for each individual plant.
+1. **Pose Estimation**  
+   - Based on ORB-SLAM3 implementa
+   - 
+2. **Single-Plant View Extraction** ✅ *(Released)*  
+   - Extracts all observations of each plant from video streams  
+   - Based on spatial projection and global ID association  
 
----
+3. **Improved 3D Gaussian Splatting (3DGS)** ✅ *(Released)*  
+   - Enhances reconstruction quality for orchard environments  
+   - Supports downstream structural and phenotypic analysis
 
 ## 🛠 Prerequisites
 
 Please ensure your environment has the following dependencies installed:
-
 * **Python**: 3.8+
 * **PyTorch**: CUDA support is recommended for YOLO-World acceleration.
 * **Open3D**: Used for point cloud transformation and coordinate processing.
