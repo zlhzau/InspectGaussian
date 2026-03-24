@@ -25,6 +25,8 @@ This project focuses on **plant-level understanding from continuous RGB-D sequen
 ## 🛠 Prerequisites
 
 Please ensure your environment has the following dependencies installed:
+* **3DGS**: Refer to the configuration instructions on the 3DGS website (https://github.com/graphdeco-inria/gaussian-splatting) for setting up the environment.
+* **CUDA**: 11.8
 * **Python**: 3.8+
 * **PyTorch**: CUDA support is recommended for YOLO-World acceleration.
 * **Open3D**: Used for point cloud transformation and coordinate processing.
@@ -49,7 +51,7 @@ datapath/
 ├── color/                # Original RGB images (.png)
 ├── depth/                # Original depth images (.tif)
 ├── associations.txt      # Association file linking image filenames to timestamps
-└── CameraTrajectory.txt  # Camera trajectory file (output from ORB-SLAM, etc.)
+└── CameraTrajectory.txt  # Camera trajectory file (output from ORB-SLAM3, etc.)
 ```
 Trajectory File Format: Each line should be timestamp tx ty tz qx qy qz qw.
 
@@ -58,6 +60,21 @@ Association File Format: Each line should be timestamp_filename filename.
 ## 🚀 Usage
 After configuring the environment and preparing your data, run id_divid.py directly:
 
+## Single Plant View Extraction
 ```bash
+cd single_plant_extraction
 python id_divid.py
+```
+
+## Prepare for 3DGS
+```bash
+cd process_for_gs
+python images_bin_generate.py
+python point3d_bin_generate.py
+```
+
+## Improved 3D Gaussian Splatting
+```bash
+cd gs_depth_mask
+python train.py -s inputpath -m outputpath --eval --position_lr_init 0.00064 --detects mask -d depth
 ```
